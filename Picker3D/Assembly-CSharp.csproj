@@ -106,6 +106,12 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.30f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
