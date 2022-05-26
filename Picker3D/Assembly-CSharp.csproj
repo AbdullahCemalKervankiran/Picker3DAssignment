@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\PickerMovement.cs" />
+     <Compile Include="Assets\PoolCounter.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -644,9 +645,9 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{33f84657-0f27-2a30-185b-a28a4aa24595}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{1b4495f6-003d-d067-0e2a-5ec48ff07db5}</Project>
+      <Name>DOTween.Modules</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
