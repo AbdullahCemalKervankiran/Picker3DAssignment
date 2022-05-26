@@ -21,6 +21,7 @@ public class PickerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.DOMoveZ(stopPoint.position.z, 5f).SetEase(Ease.Linear).SetUpdate(UpdateType.Fixed); //_rigidbody.velocity += 0.3f*Vector3.forward;
+        Debug.Log(stopPoint.position.z);
+        _rigidbody.DOMoveZ(stopPoint.position.z, 5f).SetEase(Ease.Linear).SetUpdate(UpdateType.Fixed);
     }
 }
