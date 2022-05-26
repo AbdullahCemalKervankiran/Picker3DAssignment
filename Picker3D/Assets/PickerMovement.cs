@@ -19,6 +19,6 @@ public class PickerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.velocity += 0.3f*Vector3.forward;
+        _rigidbody.DOMoveZ(40, 10).SetUpdate(UpdateType.Fixed); //_rigidbody.velocity += 0.3f*Vector3.forward;
     }
 }
