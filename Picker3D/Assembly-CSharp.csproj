@@ -50,8 +50,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\Module.cs" />
+     <Compile Include="Assets\ModuleManager.cs" />
      <Compile Include="Assets\PickerMovement.cs" />
      <Compile Include="Assets\PoolCounter.cs" />
+     <Compile Include="Assets\PoolRoad.cs" />
+     <Compile Include="Assets\Timer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -76,6 +81,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -94,6 +102,9 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
@@ -105,12 +116,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.30f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
