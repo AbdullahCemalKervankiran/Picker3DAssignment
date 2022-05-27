@@ -21,9 +21,9 @@
       <option value="$PROJECT_DIR$/Assets/Timer.cs" />
       <option value="$PROJECT_DIR$/Assets/PoolCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/PoolRoad.cs" />
-      <option value="$PROJECT_DIR$/Assets/Module.cs" />
       <option value="$PROJECT_DIR$/Assets/ModuleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Module.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29f72DhzRlrzYAriQnbEMafNIzm" />
@@ -66,7 +66,7 @@
       <updated>1653492081588</updated>
       <workItem from="1653492096394" duration="1131000" />
       <workItem from="1653556016894" duration="8386000" />
-      <workItem from="1653660777985" duration="9429000" />
+      <workItem from="1653660777985" duration="10280000" />
     </task>
     <servers />
   </component>

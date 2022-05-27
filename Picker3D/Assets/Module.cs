@@ -10,5 +10,6 @@ public class Module : MonoBehaviour
     {
         transform.position = t.position;
     }
-    
+
+    public int TargetBallCount => targetBallCount;
 }
