@@ -10,16 +10,17 @@ public class PoolCounter : MonoBehaviour
     public event Action OnNotEnoughBalls;
     [SerializeField] private TextMeshPro ballCountText;
     private int _ballCount;
+    private int _targetBallCount;
     private Timer _timer;
 
     private void Awake()
     {
+        _timer = GetComponent<Timer>();
         SetTimer();
     }
 
     private void SetTimer()
     {
-        _timer = GetComponent<Timer>();
         _timer.SetTimer(2f);
     }
 
@@ -36,18 +37,16 @@ public class PoolCounter : MonoBehaviour
                 _timer.StartTimer();
             else
                 _timer.ResetTimer();
-            other.transform.parent = transform;
             other.tag = "Untagged"; // To prevent count more than one.
             _ballCount++;
-            ballCountText.text = _ballCount + "/20";
+            ballCountText.text = _ballCount + "/" + _targetBallCount;
         }
     }
 
     private void OnTimeIsUp()
     {
-        if (_ballCount >= 20)
+        if (_ballCount >= _targetBallCount)
         {
-            Debug.Log("Next Module");
             OnEnoughBalls?.Invoke();
         }
         else
@@ -57,6 +56,11 @@ public class PoolCounter : MonoBehaviour
         }
 
         _timer.OnTimeIsUp -= OnTimeIsUp;
+    }
+    
+    public void SetTargetBallCount(int count)
+    {
+        _targetBallCount = count;
     }
 
     private void OnDisable()

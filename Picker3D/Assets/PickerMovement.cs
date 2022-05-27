@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿
+using System;
 using UnityEngine;
 
 public class PickerMovement : MonoBehaviour
 {
-    public Transform stopPoint;
-    
+    private Transform _stopPosition;
     private Rigidbody _rigidbody;
+    private bool _isMoved;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -16,12 +14,32 @@ public class PickerMovement : MonoBehaviour
 
     private void Start()
     {
-        Move();
+        Initialize();
     }
 
-    private void Move()
+    private void Initialize()
     {
-        Debug.Log(stopPoint.position.z);
-        _rigidbody.DOMoveZ(stopPoint.position.z, 5f).SetEase(Ease.Linear).SetUpdate(UpdateType.Fixed);
+        _positionZ = transform.position.z;
+    }
+
+    private float _positionX, _positionZ;
+    
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(_stopPosition.position.z - transform.position.z) >= 0.01f && _isMoved)
+        {
+            _positionZ += 0.2f; 
+            _positionX += Input.GetAxis("Horizontal")*0.2f;
+            _rigidbody.MovePosition(new Vector3(_positionX,_rigidbody.position.y,_positionZ));
+        }
+        else if (!_isMoved && Input.GetAxis("Horizontal") != 0f)
+        {
+            _isMoved = true;
+        }
+    }
+
+    public void SetStopPosition(Transform t)
+    {
+        _stopPosition = t;
     }
 }

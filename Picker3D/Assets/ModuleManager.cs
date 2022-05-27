@@ -16,7 +16,7 @@ public class ModuleManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             Module m = PickModule(i);
-            m.SetLocation(modulePositions[i]);
+            m.InitializeModule(modulePositions[i]);
             _modules.Add(m);
         }
     }

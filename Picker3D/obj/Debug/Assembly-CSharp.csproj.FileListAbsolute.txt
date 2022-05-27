@@ -1,0 +1,2 @@
+/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/vnsgames/Desktop/Picker3D/Picker3DAssignment/Picker3D/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
