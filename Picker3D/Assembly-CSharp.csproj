@@ -50,7 +50,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\BallsInPicker.cs" />
+     <Compile Include="Assets\Scripts\BallsInPicker.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Module.cs" />
      <Compile Include="Assets\Scripts\ModuleManager.cs" />
