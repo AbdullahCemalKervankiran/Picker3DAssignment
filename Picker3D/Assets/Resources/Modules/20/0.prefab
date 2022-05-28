@@ -2517,7 +2517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509409975970262814}
-  - component: {fileID: 8410549350710301812}
+  - component: {fileID: 3034495282897444599}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -2542,7 +2542,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8410549350710301812
+--- !u!114 &3034495282897444599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2551,13 +2551,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509409975970262809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b6fef138c14f42cab99af6d0915bbf7, type: 3}
+  m_Script: {fileID: 11500000, guid: b4a8c0e8a719434da7f15592ddbf9df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetBallCount: 20
+  stopPosition: {fileID: 4832764084275871788}
   balls: {fileID: 2033648081694804274}
   poolManager: {fileID: 5467350829046795269}
-  stopPosition: {fileID: 4832764084275871788}
+  moduleType: 20
 --- !u!1 &1509409975997208457
 GameObject:
   m_ObjectHideFlags: 0

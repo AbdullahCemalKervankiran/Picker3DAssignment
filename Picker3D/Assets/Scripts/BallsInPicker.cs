@@ -44,7 +44,7 @@ public class BallsInPicker : MonoBehaviour
     private void PickerMovementOnOnReachStopPosition()
     {
         _pickerMovement.OnReachStopPosition -= PickerMovementOnOnReachStopPosition;
-        transform.DOMoveZ(transform.position.z + 5, 0.5f);
+        transform.DOMoveZ(transform.position.z + 5, 0.8f);
     }
 
 
@@ -59,7 +59,7 @@ public class BallsInPicker : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            other.transform.parent = GameManager.Instance.CurrentModule.Balls.transform;
+            other.transform.parent = GameManager.Instance.CurrentModule.GetComponent<ModuleWithPool>().Balls.transform;
         }
     }
     private void OnDisable()

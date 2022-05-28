@@ -9,7 +9,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Unity Projects/My project/Assets/Scripts/TruckInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Picker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -23,11 +24,28 @@
       <option value="$PROJECT_DIR$/Assets/PoolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PoolCounter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Module.cs" />
       <option value="$PROJECT_DIR$/Assets/BallsInPicker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScoreCalculator.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScoreTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Module.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FinishModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RegularModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IModuleWithPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModuleWithPoolClass.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModuleManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModuleWithPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BallsInPicker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreCalculator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerLauncher.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Picker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PowerBar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreTrigger.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29f72DhzRlrzYAriQnbEMafNIzm" />
@@ -71,7 +89,7 @@
       <workItem from="1653492096394" duration="1131000" />
       <workItem from="1653556016894" duration="8386000" />
       <workItem from="1653660777985" duration="18452000" />
-      <workItem from="1653733735914" duration="7118000" />
+      <workItem from="1653733735914" duration="37726000" />
     </task>
     <servers />
   </component>

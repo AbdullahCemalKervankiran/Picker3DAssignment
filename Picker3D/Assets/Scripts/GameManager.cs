@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     private ModuleManager _moduleManager;
-    private PickerManager _pickerManager;
+    private Picker _picker;
     private Module _currentModule;
+    private ModuleWithPool _currentModuleWithPool;
     private int _moduleIndex;
 
     private void Awake()
@@ -17,30 +18,44 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         else
             Instance = this;
-       
+
         _moduleManager = FindObjectOfType<ModuleManager>();
-        _pickerManager = FindObjectOfType<PickerManager>();
+        _picker = FindObjectOfType<Picker>();
     }
 
     private void OnEnable()
     {
         _moduleManager.LoadModules();
         _moduleIndex = 0;
+    }
+
+    private void Start()
+    {
         InitializeCurrentModule();
     }
 
     private void InitializeCurrentModule()
     {
         _currentModule = _moduleManager.GetModule(_moduleIndex);
-        _pickerManager.SetPicker(_currentModule);
-        _currentModule.PoolManager.PoolCounter.OnEnoughBalls += PoolCounterOnOnEnoughBalls;
+        _picker.PickerMovement.SetStopPosition(_currentModule.StopPosition.position);
+        if (_currentModule.TryGetComponent(out ModuleWithPool moduleWithPool))
+        {
+            _currentModuleWithPool = moduleWithPool;
+           InitializeModuleWithPool();
+            
+        }
+        else
+        {
+            _picker.PickerMovement.MoveToLastModule();
+            _currentModuleWithPool = null;
+        }
     }
-    
+
 
     private void PoolCounterOnOnEnoughBalls()
     {
-        _currentModule.PoolManager.PoolCounter.OnEnoughBalls -= PoolCounterOnOnEnoughBalls;
-        _currentModule.DeactivateBalls();
+        _currentModuleWithPool.PoolManager.PoolCounter.OnEnoughBalls -= PoolCounterOnOnEnoughBalls;
+        _currentModuleWithPool.DeactivateBalls();
         NextModule();
     }
 
@@ -50,10 +65,21 @@ public class GameManager : MonoBehaviour
         InitializeCurrentModule();
     }
 
+    private void InitializeModuleWithPool()
+    {
+        _picker.BallsInPicker.SetPoolCounter(_currentModuleWithPool.PoolManager.PoolCounter);
+        _picker.BallsInPicker.SubscribeOnEnoughBallsEvent();
+        _picker.BallsInPicker.SubscribeOnReachStopPositionEvent();
+        _currentModuleWithPool.PoolManager.PoolCounter.OnEnoughBalls += PoolCounterOnOnEnoughBalls;
+    }
+
     private void OnDisable()
     {
-        _currentModule.PoolManager.PoolCounter.OnEnoughBalls -= PoolCounterOnOnEnoughBalls;
+        if (_currentModuleWithPool != null)
+            _currentModuleWithPool.PoolManager.PoolCounter.OnEnoughBalls -= PoolCounterOnOnEnoughBalls;
     }
 
     public Module CurrentModule => _currentModule;
+
+    public ModuleWithPool CurrentModuleWithPool => _currentModuleWithPool;
 }

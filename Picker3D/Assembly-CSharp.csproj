@@ -52,12 +52,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallsInPicker.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\GameUI.cs" />
      <Compile Include="Assets\Scripts\Module.cs" />
      <Compile Include="Assets\Scripts\ModuleManager.cs" />
-     <Compile Include="Assets\Scripts\PickerManager.cs" />
+     <Compile Include="Assets\Scripts\ModuleWithPool.cs" />
+     <Compile Include="Assets\Scripts\Picker.cs" />
      <Compile Include="Assets\Scripts\PickerMovement.cs" />
      <Compile Include="Assets\Scripts\PoolCounter.cs" />
      <Compile Include="Assets\Scripts\PoolManager.cs" />
+     <Compile Include="Assets\Scripts\PowerBar.cs" />
+     <Compile Include="Assets\Scripts\ScoreCalculator.cs" />
+     <Compile Include="Assets\Scripts\ScoreTrigger.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

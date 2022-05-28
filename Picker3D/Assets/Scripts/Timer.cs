@@ -48,7 +48,6 @@ public class Timer : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Time is Up");
         OnTimeIsUp?.Invoke();
         StopTimer();
     }
