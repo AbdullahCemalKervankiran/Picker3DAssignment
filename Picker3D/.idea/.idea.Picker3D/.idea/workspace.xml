@@ -8,12 +8,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Module.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ModuleManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Unity Projects/My project/Assets/Scripts/TruckInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PoolCounter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -26,6 +22,12 @@
       <option value="$PROJECT_DIR$/Assets/PickerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/PoolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Module.cs" />
+      <option value="$PROJECT_DIR$/Assets/BallsInPicker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29f72DhzRlrzYAriQnbEMafNIzm" />
@@ -68,7 +70,8 @@
       <updated>1653492081588</updated>
       <workItem from="1653492096394" duration="1131000" />
       <workItem from="1653556016894" duration="8386000" />
-      <workItem from="1653660777985" duration="17855000" />
+      <workItem from="1653660777985" duration="18452000" />
+      <workItem from="1653733735914" duration="7118000" />
     </task>
     <servers />
   </component>

@@ -50,13 +50,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\Module.cs" />
-     <Compile Include="Assets\ModuleManager.cs" />
-     <Compile Include="Assets\PickerMovement.cs" />
-     <Compile Include="Assets\PoolCounter.cs" />
-     <Compile Include="Assets\PoolManager.cs" />
-     <Compile Include="Assets\Timer.cs" />
+     <Compile Include="Assets\BallsInPicker.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Module.cs" />
+     <Compile Include="Assets\Scripts\ModuleManager.cs" />
+     <Compile Include="Assets\Scripts\PickerManager.cs" />
+     <Compile Include="Assets\Scripts\PickerMovement.cs" />
+     <Compile Include="Assets\Scripts\PoolCounter.cs" />
+     <Compile Include="Assets\Scripts\PoolManager.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
