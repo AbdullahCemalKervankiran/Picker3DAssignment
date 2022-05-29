@@ -6,17 +6,13 @@ using UnityEngine.UI;
 
 public class PowerBar : MonoBehaviour
 {
-    private Slider _powerBar;
+    [SerializeField] private Slider powerBar;
     private float _power;
     private bool _tookValue;
-    private void Awake()
-    {
-        _powerBar = GetComponent<Slider>();
-    }
-
+    
     private void OnEnable()
     {
-        _powerBar.onValueChanged.AddListener(SetPowerValue);
+        powerBar.onValueChanged.AddListener(SetPowerValue);
     }
 
     private void SetPowerValue(float value)
@@ -29,9 +25,9 @@ public class PowerBar : MonoBehaviour
         if (!_tookValue)
         {
             if (Input.GetKeyDown(KeyCode.W))
-                _powerBar.value += 0.075f;
-            else if (_powerBar.value > 0)
-                _powerBar.value -= Time.deltaTime * 0.3f;
+                powerBar.value += 0.075f;
+            else if (powerBar.value > 0)
+                powerBar.value -= Time.deltaTime * 0.3f;
         }
         
     }
@@ -41,4 +37,13 @@ public class PowerBar : MonoBehaviour
         _tookValue = true;
         return _power;
     }
+
+    public void SetSliderOn()
+    {
+        powerBar.gameObject.SetActive(true);
+    } 
+    public void SetSliderOff()
+    {
+        powerBar.gameObject.SetActive(false);
+    } 
 }

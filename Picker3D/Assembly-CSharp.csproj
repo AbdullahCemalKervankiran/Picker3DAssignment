@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\PoolCounter.cs" />
      <Compile Include="Assets\Scripts\PoolManager.cs" />
      <Compile Include="Assets\Scripts\PowerBar.cs" />
+     <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\ScoreCalculator.cs" />
      <Compile Include="Assets\Scripts\ScoreTrigger.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />

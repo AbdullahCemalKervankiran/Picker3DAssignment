@@ -13,9 +13,10 @@ public class Timer : MonoBehaviour
     
     public void SetTimer(float time)
     {
+        if(_timerRunning)
+            StopTimer();
         _time = time;
         _elapsedTime = 0f;
-        _timerRunning = false;
         _timerCoroutine = RunTimer();
     }
 

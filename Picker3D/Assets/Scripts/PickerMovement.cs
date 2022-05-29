@@ -75,7 +75,7 @@ public class PickerMovement : MonoBehaviour
     {
         _locked = true;
         //Sequence sequence = DOTween.Sequence();
-        GameUI.Instance.PowerBar.gameObject.SetActive(true);
+        _powerBar.SetSliderOn();
 
         _rigidbody.DOMoveX(0, 1f).SetUpdate(UpdateType.Fixed).SetEase(Ease.Linear).OnComplete(MoveToLauncher);
     }
@@ -85,7 +85,7 @@ public class PickerMovement : MonoBehaviour
         _rigidbody.DOMoveZ(_pickerLauncher.transform.position.z, 3f).SetUpdate(UpdateType.Fixed)
             .SetEase(Ease.Linear).OnComplete(() =>
                 {
-                    GameUI.Instance.PowerBar.gameObject.SetActive(false);
+                    _powerBar.SetSliderOff();
                     RestorePositionZ();
                     Launch();
                 }
@@ -96,12 +96,12 @@ public class PickerMovement : MonoBehaviour
     {
         _rigidbody
             .DOMoveZ(
-                _stopPosition.z - (1f - GameUI.Instance.PowerBar.GetPowerValue()) * (_stopPosition.z - _positionZ),
+                _stopPosition.z - (1f - _powerBar.GetPowerValue()) * (_stopPosition.z - _positionZ),
                 2f).SetUpdate(UpdateType.Fixed).SetEase(Ease.InOutSine).OnComplete(LevelCompleted);
     }
 
     private void LevelCompleted()
     {
-        Debug.Log("Score: " + ScoreCalculator.Instance.GetScore());
+       GameManager.Instance.CompleteLevel();
     }
 }

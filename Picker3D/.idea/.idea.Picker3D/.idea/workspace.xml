@@ -42,10 +42,11 @@
       <option value="$PROJECT_DIR$/Assets/GameUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Picker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PowerBar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PowerBar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29f72DhzRlrzYAriQnbEMafNIzm" />
@@ -89,7 +90,8 @@
       <workItem from="1653492096394" duration="1131000" />
       <workItem from="1653556016894" duration="8386000" />
       <workItem from="1653660777985" duration="18452000" />
-      <workItem from="1653733735914" duration="37726000" />
+      <workItem from="1653733735914" duration="38021000" />
+      <workItem from="1653834546048" duration="3868000" />
     </task>
     <servers />
   </component>
