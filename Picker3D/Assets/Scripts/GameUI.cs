@@ -7,10 +7,16 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentLevel, nextLevel, scoreText, subtitle;
     [SerializeField] private GameObject levelCompleted, levelFailed, gameInstructions;
     [SerializeField] private Image[] modulesStatus;
-    private int _moduleIndex = 0;
+    private int _moduleIndex;
     private Timer _timer;
     private bool _levelCompleted;
 
+    /// <summary>
+    ///
+    /// This script handling the game UI
+    /// 
+    /// </summary>
+    
     private void Awake()
     {
         _timer = GetComponent<Timer>();
@@ -18,15 +24,10 @@ public class GameUI : MonoBehaviour
 
     private void OnEnable()
     {
+        // Set current score and level in the beginning
         SetScore();
         SetLevelText();
     }
-
-    public void SetInstructionsOff()
-    {
-        gameInstructions.SetActive(false);
-    }
-
     private void SetLevelText()
     {
         currentLevel.text = "" + PlayerPrefs.GetInt("level", 1);
@@ -37,6 +38,13 @@ public class GameUI : MonoBehaviour
     {
         scoreText.text = "" + PlayerPrefs.GetInt("score", 0);
     }
+    
+    public void SetInstructionsOff() // Disable instructions when picker is moved
+    {
+        gameInstructions.SetActive(false);
+    }
+
+    #region Module Methods
 
     public void SetModuleOK()
     {
@@ -50,16 +58,19 @@ public class GameUI : MonoBehaviour
         levelFailed.SetActive(true);
     }
 
-    public void SetLevelCompleted()
+    #endregion
+    
+    public void SetLevelCompleted() 
     {
-        Debug.Log("Level Completed");
-        _levelCompleted = true;
+       _levelCompleted = true;
         int gainedScore = ScoreCalculator.Instance.GetScore();
+        
+        // Set gained score, set level
         PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score", 0) + gainedScore);
         PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level", 0) + 1);
+        
         SetScore();
         SetSubtitle("+" + gainedScore, 2f);
-        //levelCompleted.SetActive(true);
     }
 
     public void SetSubtitle(string text, float time)
@@ -70,14 +81,18 @@ public class GameUI : MonoBehaviour
         _timer.StartTimer();
     }
 
+    #region Event Handlers
+
     private void TimerOnOnTimeIsUp()
     {
         subtitle.text = "";
-        if (_levelCompleted)
+        if (_levelCompleted) // if level is completed next level panel is set
             levelCompleted.SetActive(true);
         _timer.OnTimeIsUp -= TimerOnOnTimeIsUp;
     }
 
+    #endregion
+    
     private void OnDisable()
     {
         if (_timer != null)

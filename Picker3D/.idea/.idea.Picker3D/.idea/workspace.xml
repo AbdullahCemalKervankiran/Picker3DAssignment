@@ -27,7 +27,6 @@
       <option value="$PROJECT_DIR$/Assets/BallsInPicker.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreCalculator.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Module.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FinishModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RegularModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IModule.cs" />
@@ -38,18 +37,20 @@
       <option value="$PROJECT_DIR$/Assets/GameUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PickerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PowerBar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PoolCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
       <option value="$PROJECT_DIR$/Assets/SceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreCalculator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Picker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ModuleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BallsInPicker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Module.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PickerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModuleManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29f72DhzRlrzYAriQnbEMafNIzm" />
@@ -95,7 +96,7 @@
       <workItem from="1653660777985" duration="18452000" />
       <workItem from="1653733735914" duration="38021000" />
       <workItem from="1653834546048" duration="11890000" />
-      <workItem from="1653913836734" duration="1018000" />
+      <workItem from="1653913836734" duration="8011000" />
     </task>
     <servers />
   </component>

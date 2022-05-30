@@ -13,6 +13,11 @@ public class PoolCounter : MonoBehaviour
     private int _targetBallCount;
     private Timer _timer;
 
+    /// <summary>
+    ///
+    /// This script handles counting balls, reports that there are enough balls in the pool or not.
+    /// 
+    /// </summary>
     private void Awake()
     {
         _timer = GetComponent<Timer>();
@@ -33,9 +38,9 @@ public class PoolCounter : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            if (!_timer.IsTimerRunning())
+            if (!_timer.IsTimerRunning()) // When a ball fall into the pool, the timer is set.
                 _timer.StartTimer();
-            else
+            else// Timer will reset when balls still falling into the pool 
                 _timer.ResetTimer();
             other.tag = "Untagged"; // To prevent count more than one.
             other.gameObject.transform.parent = transform; // To separate from picker.

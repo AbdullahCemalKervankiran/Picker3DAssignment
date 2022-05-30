@@ -13,6 +13,12 @@ public class PickerMovement : MonoBehaviour
     private float _positionX, _positionZ;
     private bool _isMoved, _locked;
 
+    /// <summary>
+    ///
+    /// This script is handling picker movement
+    /// 
+    /// </summary>
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -33,6 +39,7 @@ public class PickerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Picker can move if it is not reach stop position, not locked and moving command is given
         if (Mathf.Abs(_stopPosition.z - transform.position.z) >= 0.01f && _isMoved && !_locked)
         {
             _positionZ += 0.2f;
@@ -40,12 +47,12 @@ public class PickerMovement : MonoBehaviour
             _positionX = Mathf.Clamp(_positionX, -border, border);
             _rigidbody.MovePosition(new Vector3(_positionX, _rigidbody.position.y, _positionZ));
         }
-        else if (!_isMoved && Input.GetAxis("Horizontal") != 0f)
+        else if (!_isMoved && Input.GetAxis("Horizontal") != 0f) // First user input
         {
             GameManager.Instance.GameUI.SetInstructionsOff();
             _isMoved = true;
         }
-        else if (Mathf.Abs(_stopPosition.z - transform.position.z) < 0.01f)
+        else if (Mathf.Abs(_stopPosition.z - transform.position.z) < 0.01f) // Reach stop position
         {
             OnReachStopPosition?.Invoke();
         }
@@ -54,11 +61,16 @@ public class PickerMovement : MonoBehaviour
     public void SetStopPosition(Vector3 t)
     {
         _stopPosition = t;
-        Debug.Log("New Stop Pos: " + _stopPosition);
     }
 
+    #region Movement for Last Module
 
-    public void AlignPicker()
+    public void PrepareForLastModule()
+    {
+        AlignPicker();
+    }
+
+    private void AlignPicker()
     {
         _locked = true;
         _powerBar.SetSliderOn();
@@ -98,4 +110,7 @@ public class PickerMovement : MonoBehaviour
     {
         GameManager.Instance.CompleteLevel();
     }
+
+    #endregion
+    
 }

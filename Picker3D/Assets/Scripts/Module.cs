@@ -11,7 +11,6 @@ public class Module : MonoBehaviour
     {
         SetLocation(t);
     }
-
     
     private void SetLocation(Transform t)
     {

@@ -8,6 +8,12 @@ public class ModuleManager : MonoBehaviour
     [SerializeField] private int[] moduleCounts;
     private List<Module> _modules;
 
+    /// <summary>
+    ///
+    /// This script makes the modules ready. Picks random modules in given path
+    /// 
+    /// </summary>
+    
     public void LoadModules()
     {
         _modules = new List<Module>();
@@ -26,6 +32,7 @@ public class ModuleManager : MonoBehaviour
                 GameObject;
         if (prefab != null)
             return prefab.GetComponent<Module>();
+        Debug.LogError("Module is not loaded");
         return null;
     }
     
