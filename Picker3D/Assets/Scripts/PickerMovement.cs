@@ -20,7 +20,7 @@ public class PickerMovement : MonoBehaviour
         _pickerLauncher = GameObject.FindWithTag("PickerLauncher");
     }
 
-    private void Start()
+    private void OnEnable()
     {
         RestorePositionZ();
     }
@@ -42,6 +42,7 @@ public class PickerMovement : MonoBehaviour
         }
         else if (!_isMoved && Input.GetAxis("Horizontal") != 0f)
         {
+            GameManager.Instance.GameUI.SetInstructionsOff();
             _isMoved = true;
         }
         else if (Mathf.Abs(_stopPosition.z - transform.position.z) < 0.01f)
@@ -56,34 +57,25 @@ public class PickerMovement : MonoBehaviour
         Debug.Log("New Stop Pos: " + _stopPosition);
     }
 
-    public void SetMovementLock(bool b)
-    {
-        //OnMovingLauncher?.Invoke();
-        _locked = b;
-        /*Sequence sequence = DOTween.Sequence();
-        sequence.Append(_rigidbody.DOMoveX(0, 0.5f));
-        sequence.Append(_rigidbody.DOMoveZ(_pickerLauncher.position.z, 5f));*/
-    }
 
-    public Rigidbody Rigidbody
-    {
-        get => _rigidbody;
-        set => _rigidbody = value;
-    }
-
-    public void MoveToLastModule()
+    public void AlignPicker()
     {
         _locked = true;
-        //Sequence sequence = DOTween.Sequence();
         _powerBar.SetSliderOn();
-
-        _rigidbody.DOMoveX(0, 1f).SetUpdate(UpdateType.Fixed).SetEase(Ease.Linear).OnComplete(MoveToLauncher);
+        _rigidbody
+            .DOMoveX(0, 1f)
+            .SetUpdate(UpdateType.Fixed)
+            .SetEase(Ease.Linear)
+            .OnComplete(MoveToLauncher);
     }
 
     private void MoveToLauncher()
     {
-        _rigidbody.DOMoveZ(_pickerLauncher.transform.position.z, 3f).SetUpdate(UpdateType.Fixed)
-            .SetEase(Ease.Linear).OnComplete(() =>
+        _rigidbody
+            .DOMoveZ(_pickerLauncher.transform.position.z, 3f)
+            .SetUpdate(UpdateType.Fixed)
+            .SetEase(Ease.Linear)
+            .OnComplete(() =>
                 {
                     _powerBar.SetSliderOff();
                     RestorePositionZ();
@@ -96,12 +88,14 @@ public class PickerMovement : MonoBehaviour
     {
         _rigidbody
             .DOMoveZ(
-                _stopPosition.z - (1f - _powerBar.GetPowerValue()) * (_stopPosition.z - _positionZ),
-                2f).SetUpdate(UpdateType.Fixed).SetEase(Ease.InOutSine).OnComplete(LevelCompleted);
+                _stopPosition.z - (1f - _powerBar.GetPowerValue()) * (_stopPosition.z - _positionZ), 2f)
+            .SetUpdate(UpdateType.Fixed)
+            .SetEase(Ease.InOutSine)
+            .OnComplete(LevelCompleted);
     }
 
     private void LevelCompleted()
     {
-       GameManager.Instance.CompleteLevel();
+        GameManager.Instance.CompleteLevel();
     }
 }

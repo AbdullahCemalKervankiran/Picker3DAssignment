@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,8 +27,6 @@ public class GameManager : MonoBehaviour
         _moduleManager.LoadModules();
         _moduleIndex = 0;
     }
-
-
     private void Start()
     {
         InitializeCurrentModule();
@@ -49,7 +44,7 @@ public class GameManager : MonoBehaviour
         else
         {
             _gameUI.SetSubtitle("Press W! W! W!", 3f);
-            _picker.PickerMovement.MoveToLastModule();
+            _picker.PickerMovement.AlignPicker();
             _currentModuleWithPool = null;
         }
     }
@@ -101,4 +96,6 @@ public class GameManager : MonoBehaviour
     }
 
     public Module CurrentModule => _currentModule;
+
+    public GameUI GameUI => _gameUI;
 }

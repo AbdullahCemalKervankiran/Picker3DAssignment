@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI currentLevel, nextLevel, scoreText, subtitle;
-    [SerializeField] private GameObject levelCompleted, levelFailed;
+    [SerializeField] private GameObject levelCompleted, levelFailed, gameInstructions;
     [SerializeField] private Image[] modulesStatus;
     private int _moduleIndex = 0;
     private Timer _timer;
@@ -23,6 +20,11 @@ public class GameUI : MonoBehaviour
     {
         SetScore();
         SetLevelText();
+    }
+
+    public void SetInstructionsOff()
+    {
+        gameInstructions.SetActive(false);
     }
 
     private void SetLevelText()

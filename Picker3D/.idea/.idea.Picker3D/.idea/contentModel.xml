@@ -33,6 +33,7 @@
           <e p="PoolCounter.cs" t="Include" />
           <e p="PoolManager.cs" t="Include" />
           <e p="PowerBar.cs" t="Include" />
+          <e p="SceneManager.cs" t="Include" />
           <e p="ScoreCalculator.cs" t="Include" />
           <e p="ScoreTrigger.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
